@@ -1,0 +1,19 @@
+<h1>
+  <%= @todo.title %>
+</h1>
+<br />
+<i>
+  Created At: <%= @todo.created_at %>
+</i>
+<br />
+<i>
+  Updated At: <%= @todo.updated_at %>
+</i>
+
+<hr />
+
+<div class='action-buttons'>
+  <%= link_to 'All Items', todos_path %>
+  <%= link_to 'Edit', edit_todo_path(@todo) %>
+  <%= link_to 'Delete', todo_path(@todo), method: :delete, data: {confirm: 'Do you wish to remove this item?'} %>
+</div>

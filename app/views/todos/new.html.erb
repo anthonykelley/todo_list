@@ -1,0 +1,7 @@
+<h1>Add New Item</h1>
+<%= form_for @todo do |f| %>
+  <%= f.text_field :title, required: true %>
+  <br />
+  <%= f.submit 'Add' %>
+<% end %>
+<%= link_to 'All Items', todos_path, class: 'btn btn-primary' %>
